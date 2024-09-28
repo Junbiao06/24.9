@@ -1,0 +1,16 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "38263595",
+      "name": "圣诞日历",
+      "font_class": "shengdanrili",
+      "unicode": "e8d6",
+      "unicode_decimal": 59606
+    }
+  ]
+}
