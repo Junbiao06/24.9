@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日历</title>
+    <link rel="stylesheet" href="calender.css">
+    
+
+</head>
+<body>
+
+    <div class="showtime">请稍后...</div>
+    <script>
+        var t = null;
+        t = setTimeout(time,1000);
+        function time()
+        {
+            clearTimeout(t);
+            now = new Date();
+            var y = now.getFullYear();
+            var m = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var min = now.getMinutes();
+            var s = now.getSeconds();
+            if (min < 10 && s<10)
+            {
+                document.querySelector(".showtime").innerHTML = "当前时间："+ y + '/' + m + '/' + d + '--' + h + ':' + '0' + min + ':' + '0' + s;
+            }
+            else if(s <10)
+            {
+                document.querySelector(".showtime").innerHTML = "当前时间："+ y + '/' + m + '/' + d + '--' + h + ':' + min + ':' + '0' + s;
+            }
+            else if(min<10)
+            {
+                document.querySelector(".showtime").innerHTML = "当前时间："+ y + '/' + m + '/' + d + '--' + h + ':' + '0' + min + ':' + s;
+            }
+            else
+            {
+                document.querySelector(".showtime").innerHTML = "当前时间："+ y + '/' + m + '/' + d + '--' + h + ':' + min + ':' + s;
+            }
+
+            t =setTimeout(time,1000);
+
+        }
+    </script>
+
+
+
+    <div class="Header"  id="Header">
+        <h1 id="showmonth">Sep</h1>
+        <button id="lastmonth"><<</button>
+        <button id="nextmonth">>></button>
+    </div>
+
+
+
+        <table>
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thr</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+                <td>8</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+                <td>14</td>
+                <td>15</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+                <td>21</td>
+                <td>22</td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+                <td>28</td>
+                <td>29</td>
+            </tr>
+            <tr>
+                <td>30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+
+
+<script src="calender.js"></script>
+    
+</body>
+</html>

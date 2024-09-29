@@ -1,0 +1,27 @@
+table,td
+{
+    border: 5px solid brown;
+}
+th,table,td,tr
+{
+    padding: 15px;
+}
+table
+{
+    border-collapse: collapse;
+    width: 500px;
+    height: 350px;
+    text-align: center;
+    vertical-align: center;
+}
+.Header
+{
+    font-size: 25px;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+th
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

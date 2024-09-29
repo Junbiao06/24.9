@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div class="showtime">请稍后...</div>
+    <script>
+        var t = null;
+        t = setTimeout(time,1000);
+        function time()
+        {
+            clearTimeout(t);
+            now = new Date();
+            var y = now.getFullYear();
+            var m = now.getMonth() + 1;
+            var d = now.getDate();
+            var h = now.getHours();
+            var min = now.getMinutes();
+            var s = now.getSeconds();
+            if (min < 10)
+            {
+                document.querySelector(".showtime").innerHTML = "当前时间："+ y + '/' + m + '/' + d + '--' + h + ':' + '0' + min + ':' + s;
+            }
+            else if(s <10)
+            {
+                document.querySelector(".showtime").innerHTML = "当前时间："+ y + '/' + m + '/' + d + '--' + h + ':' + min + ':' + '0' + s;
+            }
+            else
+            {
+                document.querySelector(".showtime").innerHTML = "当前时间："+ y + '/' + m + '/' + d + '--' + h + ':' + min + ':' + s;
+            }
+
+            t =setTimeout(time,1000);
+
+        }
+    </script>
+
+
+
+
+</body>
+</html>
